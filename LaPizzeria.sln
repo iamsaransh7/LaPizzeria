@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaPizzeria.Models", "LaPizz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaPizzeria.Services", "LaPizzeria.Services\LaPizzeria.Services.csproj", "{D55B3066-7387-4AF2-AE39-E24E85EBAAFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaPizzeria.UI", "LaPizzeria.UI\LaPizzeria.UI.csproj", "{BA45D207-873E-4F19-93C7-C0D56FB731F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaPizzeria.UI", "LaPizzeria.UI\LaPizzeria.UI.csproj", "{11A84F4D-DE48-4D42-A59B-37389365AF0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{D55B3066-7387-4AF2-AE39-E24E85EBAAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D55B3066-7387-4AF2-AE39-E24E85EBAAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D55B3066-7387-4AF2-AE39-E24E85EBAAFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA45D207-873E-4F19-93C7-C0D56FB731F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA45D207-873E-4F19-93C7-C0D56FB731F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA45D207-873E-4F19-93C7-C0D56FB731F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA45D207-873E-4F19-93C7-C0D56FB731F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11A84F4D-DE48-4D42-A59B-37389365AF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11A84F4D-DE48-4D42-A59B-37389365AF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11A84F4D-DE48-4D42-A59B-37389365AF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11A84F4D-DE48-4D42-A59B-37389365AF0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -64,7 +64,6 @@ namespace LaPizzeria.Repositories.Implementation
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
