@@ -1,12 +1,9 @@
 ﻿using LaPizzeria.Models;
-using LaPizzeria.UI.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
-namespace LaPizzeria.UI.Areas.Admin.Controllers
+namespace LaPizzeria.UI.Controllers
 {
-    [CustomAuthorize(Roles = "Admin")]
-    [Area("Admin")]
     public class BaseController : Controller
     {
         public UserModel CurrentUser

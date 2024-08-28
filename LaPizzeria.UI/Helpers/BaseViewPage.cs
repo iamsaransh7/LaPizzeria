@@ -1,19 +1,16 @@
 ﻿using LaPizzeria.Models;
-using LaPizzeria.UI.Helpers;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 using System.Text.Json;
 
-namespace LaPizzeria.UI.Areas.Admin.Controllers
+namespace LaPizzeria.UI.Helpers
 {
-    [CustomAuthorize(Roles = "Admin")]
-    [Area("Admin")]
-    public class BaseController : Controller
+    public abstract class BaseViewPage<TModel>: RazorPage<TModel>
     {
         public UserModel CurrentUser
         {
             get
             {
-                if (User.Claims.Count() > 0)
+                if(User.Claims.Count() > 0)
                 {
                     string userData = User.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.UserData).Value;
                     return JsonSerializer.Deserialize<UserModel>(userData);

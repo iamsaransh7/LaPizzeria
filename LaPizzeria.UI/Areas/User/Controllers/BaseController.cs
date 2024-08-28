@@ -3,10 +3,10 @@ using LaPizzeria.UI.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
-namespace LaPizzeria.UI.Areas.Admin.Controllers
+namespace LaPizzeria.UI.Areas.User.Controllers
 {
-    [CustomAuthorize(Roles = "Admin")]
-    [Area("Admin")]
+    [CustomAuthorize(Roles = "User")]
+    [Area("User")]
     public class BaseController : Controller
     {
         public UserModel CurrentUser

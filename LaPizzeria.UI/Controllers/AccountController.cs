@@ -9,7 +9,7 @@ using System.Text.Json;
 
 namespace LaPizzeria.UI.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         IAuthService _authService;
 
@@ -20,6 +20,14 @@ namespace LaPizzeria.UI.Controllers
 
         public IActionResult Login()
         {
+            if (CurrentUser != null && CurrentUser.Roles.Contains("Admin")) 
+            {
+                return RedirectToAction("Index", "Home", new { area = "Admin" });
+            }
+            else if(CurrentUser != null && CurrentUser.Roles.Contains("User")) 
+            {
+                return RedirectToAction("Index", "Home", new { area = "User" });
+            }
             return View();
         }
 
@@ -45,7 +53,7 @@ namespace LaPizzeria.UI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(LoginViewModel model)
+        public IActionResult Login(LoginViewModel model, string? returnUrl)
         {
             if (ModelState.IsValid) 
             {
@@ -54,6 +62,11 @@ namespace LaPizzeria.UI.Controllers
                 if (user != null)
                 {
                     GenerateTicket(user);
+
+                    if (!string.IsNullOrEmpty(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
                     if (user.Roles.Contains("Admin"))
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
