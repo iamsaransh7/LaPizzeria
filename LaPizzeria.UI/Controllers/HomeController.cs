@@ -1,3 +1,4 @@
+using LaPizzeria.Services.Interfaces;
 using LaPizzeria.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -6,16 +7,16 @@ namespace LaPizzeria.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        IItemService _itemService;
+        public HomeController(IItemService itemService)
         {
-            _logger = logger;
+            _itemService = itemService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var items = _itemService.GetItems();
+            return View(items);
         }
 
         public IActionResult Privacy()

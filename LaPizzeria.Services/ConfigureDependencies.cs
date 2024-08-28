@@ -1,5 +1,6 @@
 ﻿
 using LaPizzeria.Core;
+using LaPizzeria.Core.Entities;
 using LaPizzeria.Repositories.Implementation;
 using LaPizzeria.Repositories.Interfaces;
 using LaPizzeria.Services.Implementation;
@@ -21,9 +22,11 @@ namespace LaPizzeria.Services
 
             //repositories
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IRepository<Item>, Repository<Item>>();
 
             //services
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IItemService, ItemService>();
         }
     }
 }
